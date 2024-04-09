@@ -1,13 +1,12 @@
-print("2-fer")
+print("conversão")
 
-def Grande():
-    nome = iput("me informe seu nome")
+def converter_dolar_para_real(valor_dolar, cotacao_dolar ):
+    valor_real = valor_dolar * cotacao_dolar
+    return valor_real
 
-    if not nome:
-        nome = ("voce")
-    else:
-        pass
+cotacao = float(input("qual é a cotaçao do dolar em reais? R$ "))
+valor_dolar = float(input("quanto em dolares voce deseja converter para reais? US$ "))
 
-    print(f"um biscoito para {nome},um biscoito para mim")
+valor_convertido = converter_dolar_para_real(valor_dolar, cotacao_dolar )
 
-    Grande()
+print(f"o valor em reais é: R${valor_convertido:.2f}")
